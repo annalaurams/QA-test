@@ -1,6 +1,6 @@
-# 🧪 Projeto User CRUD com Testes e Docker
+# Projeto CRUD com Testes e Docker
 
-Este projeto implementa um CRUD completo de usuários com **backend, frontend, PostgreSQL, Docker e testes comJest, Cypress e Playwright.**
+Este projeto implementa um CRUD completo de usuários com **backend, frontend, PostgreSQL, Docker e testes com Jest, Cypress e Playwright.**
 
 ---
 
@@ -22,7 +22,7 @@ Crie um arquivo `.env` dentro da pasta `server` com a URL de conexão do Postgre
 
 **Para desenvolvimento local (sem Docker no backend):**
 ```env
-DATABASE_URL="postgresql://qa_user:Anna182135@localhost:5433/users?schema=qa"
+DATABASE_URL="postgresql://qa_user:<suasenha>@localhost:5433/<banco>?schema=qa"
 ```
 
 **Para uso com Docker Compose (backend + banco):**
@@ -49,11 +49,6 @@ npx prisma db push
 ## 🐳 Docker
 
 O projeto está configurado para rodar com **Docker** e **Docker Compose**, facilitando a configuração do ambiente.
-
-### 📦 Arquivos Docker
-
-- **`Dockerfile`**: Define a imagem do backend Node.js
-- **`docker-compose.yml`**: Orquestra os serviços do PostgreSQL e do backend
 
 ### 🚀 Como Rodar o Projeto
 
@@ -101,18 +96,6 @@ Para visualizar os logs:
 
 ```bash
 docker compose logs -f
-```
-
-Para parar os serviços:
-
-```bash
-docker compose down
-```
-
-Para parar e remover volumes (limpar dados do banco):
-
-```bash
-docker compose down -v
 ```
 
 ---
